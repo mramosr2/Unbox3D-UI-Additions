@@ -1,0 +1,23 @@
+<Window x:Class="UnBox3D.Views.LoadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Loading..." ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False" WindowStyle="ToolWindow"
+        MinWidth="420" MinHeight="180">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Bind to StatusHint for live updates; code-behind also updates StatusText.Text -->
+        <TextBlock x:Name="StatusText"
+                   Text="{Binding StatusHint, FallbackValue=Preparing UnBox3D…}"
+                   FontSize="16" TextWrapping="Wrap" Margin="0,0,0,12"/>
+
+        <ProgressBar x:Name="ProgressBar" Grid.Row="1" Height="10"
+                     Minimum="0" Maximum="100"
+                     IsIndeterminate="{Binding IsProgressIndeterminate}" />
+    </Grid>
+</Window>

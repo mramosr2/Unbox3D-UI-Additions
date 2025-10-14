@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnBox3D", "UnBox3D.csproj", "{8B9E6438-0DDB-41FE-BA96-F7C2625A7A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnBox3D.Tests", "..\UnBox3D.Tests\UnBox3D.Tests.csproj", "{78679842-FBB4-46E4-9564-541C8FD22B5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B9E6438-0DDB-41FE-BA96-F7C2625A7A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9E6438-0DDB-41FE-BA96-F7C2625A7A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9E6438-0DDB-41FE-BA96-F7C2625A7A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9E6438-0DDB-41FE-BA96-F7C2625A7A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78679842-FBB4-46E4-9564-541C8FD22B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78679842-FBB4-46E4-9564-541C8FD22B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78679842-FBB4-46E4-9564-541C8FD22B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78679842-FBB4-46E4-9564-541C8FD22B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

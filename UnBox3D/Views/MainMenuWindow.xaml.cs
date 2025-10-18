@@ -73,6 +73,11 @@ namespace UnBox3D.Views
         private void Settings_Click(object? sender, RoutedEventArgs e)
         {
             var settings = _services.GetRequiredService<SettingsWindow>();
+            // Ensure the window has its dependencies before Loaded fires
+            var logger = _services.GetRequiredService<ILogger>();
+            var settingsManager = _services.GetRequiredService<ISettingsManager>();
+            settings.Initialize(logger, settingsManager);
+
             settings.Owner = this;
             settings.ShowDialog();
         }

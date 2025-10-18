@@ -10,6 +10,7 @@ using UnBox3D.Rendering;
 using UnBox3D.Rendering.OpenGL;
 using UnBox3D.Utils;
 using TextBox = System.Windows.Controls.TextBox;
+using UnBox3D;
 
 namespace UnBox3D.Views
 {
@@ -245,7 +246,8 @@ namespace UnBox3D.Views
         // Settings menu item click (use DI)
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            var settings = App.Services.GetRequiredService<SettingsWindow>();
+            // Always create a fresh instance, regardless of DI lifetime.
+            var settings = ActivatorUtilities.CreateInstance<SettingsWindow>(App.Services);
             settings.Owner = this;
             settings.ShowDialog();
         }

@@ -89,7 +89,10 @@ namespace UnBox3D.Views
 
         private void Help_Click(object? sender, RoutedEventArgs e)
         {
-            WpfMessageBox.Show("Help (coming soon).", "UnBox3D");
+            //WpfMessageBox.Show("Help (coming soon).", "UnBox3D");
+            var helpWindow = new HelpWindow(_services);
+            helpWindow.Show();
+            this.Close();
         }
 
         private void Exit_Click(object? sender, RoutedEventArgs e) => Application.Current.Shutdown();
